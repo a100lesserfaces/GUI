@@ -43,6 +43,7 @@ header h1 {
     float: right;
     padding-top: 6px;
     padding-right: 5px;
+    color: #fff;
 }
 #social_media img {
     height: 25px;
@@ -55,4 +56,5 @@ header h1 {
 #listing p {
     margin: 0px;
     padding: 5px;
+    text-align: center;
 }

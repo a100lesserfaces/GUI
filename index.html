@@ -10,9 +10,10 @@
 <body>
 <header>
     <h1>Swap Stuff</h1>
-    <div id="social_media">
+    <div id="social_media" style="text-align: right;">
         <img src="facebook.png" alt="Facebook Icon" />
-        <img src="twitter.png" alt="Twitter Icon" />
+        <img src="twitter.png" alt="Twitter Icon" /><br /><br />
+        <i>Swap what you don't need to get what you do</i>
     </div>
     <div style="clear: both;"></div>
 </header>
@@ -29,8 +30,23 @@
             Categories
         </li>
     </ul>
-    <button onclick="loadXMLDoc()">Press here</button>
     <div id="listing">
+        <script language="javascript" type="text/javascript">
+            var txt = '';
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
+                    txt = xmlhttp.responseText;
+                }
+            };
+            //where abc.txt is changed to the location of listings
+            xmlhttp.open("GET","abc.txt",true);
+            xmlhttp.send();
+            var myArray = txt.split(" ");
+            for (var i = 0; i < 5; i++) {
+                document.write(myArray[i] + "<br />");
+            }
+        </script>
     </div>
 </div>
 </body>

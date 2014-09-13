@@ -8,6 +8,8 @@ function loadXMLDoc() {
     }
     xmlhttp.onreadystatechange=function() {
         if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+	    var text = xmlhttp.responseText;
+	    var lines = text.split("\n");
             for (var i = 0; i < lines.length; i++) {
                 document.getElementById("listing").innerHTML = lines[i];
             }
