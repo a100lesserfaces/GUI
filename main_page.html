@@ -12,7 +12,7 @@
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 <header>
-    <a href="index.html"><h1>Stuff Swap</h1></a>
+    <a href="main_page.html"><h1>Stuff Swap</h1></a>
     <div id="social_media" style="text-align: right;">
         <img src="images/facebook.png" alt="Facebook Icon" />
         <img src="images/twitter.png" alt="Twitter Icon" /><br /><br />
@@ -23,36 +23,75 @@
 <div id="wrapper">
     <div id="splash_image">
         <img src="images/splash_image.jpg" class="img-responsive" alt="Splash Image" />
-    </div>
-    <ul>
-        <li>
-            <a href="swap.html">For Swap</a>
-        </li>
-        <li>
-            <a href="free.html">For Free</a>
-        </li>
-        <li>
-            <a href="add_listing.html">Add Listing</a>
-        </li>
-    </ul>
+    </div> 
     <div id="listing">
-        <script language="javascript" type="text/javascript">
-            //this needs to read in the first couple of items available
-            var txt = '';
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function(){
-                if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
-                    txt = xmlhttp.responseText;
-                }
-            };
-            //where abc.txt is changed to the location of listings
-            xmlhttp.open("GET","abc.txt",true);
-            xmlhttp.send();
-            var myArray = txt.split(" ");
-            for (var i = 0; i < 5; i++) {
-                document.write(myArray[i] + "<br />");
-            }
-        </script>
+        <table>
+            <tr>
+                <td>
+                    <strong>Available Listings</strong>
+                    <!-- this will use "document.write({HOWEVER YOU FORMAT THIS} + "<br />");" to write the different listings (use a for loop to go through the filtered array) -->
+                    <!-- the <br /> is important or else it will all be on one line and messy and I will hit you -->
+                    <!-- use onload!!! -->
+                    <p></p>
+                    <a href="all_listings.html" style="color: #000; text-decoration: underline;">Look at all listings</a>
+                </td>
+                <td style="padding-left: 50px;">
+                <strong>Add a Listing</strong>
+                <form class="form-horizontal">
+                    <fieldset style="border: none;">
+                        <!-- Title of Listing-->
+                        <div class="control-group">
+                            <label class="title" for="title">Title:</label>
+                            <div class="controls">
+                                <input id="title" name="title" type="text" placeholder="" class="input-xlarge">
+                            </div>
+                        </div>
+                        <!-- Swap or Free-->
+                        <div class="control-group">
+                            <label class="title" for="swap">Swap or Free:</label>
+                            <div class="controls">
+                                <input id="swap" name="swap" type="radio" value="true">Swap &nbsp; <input id="free" name="swap" type="radio" value="false"> False
+                            </div>
+                        </div>
+                        <!-- Category-->
+                        <div class="control-group">
+                            <label class="title" name="cat">Category:</label><br />
+                            <select name="cat">
+                                <option value="furniture">Furniture</option>
+                                <option value="food">Food</option>
+                                <option value="cooking_supplies">Cooking Supplies</option>
+                                <option value="instruments">Musical Instruments</option>
+                                <option value="pet_supplies">Pet Supplies</option>
+                                <option value="free">Free Stuff</option>
+                                <option value="misc">Miscellaneous</option>
+                            </select>
+                        </div>
+                        <!-- Expiration Date-->
+                        <div class="control-group">
+                            <label class="title" for="title">Post Until:</label>
+                            <div class="controls">
+                                <input id="expdate" name="expdate" type="text" placeholder="" class="input-xlarge">
+                            </div>
+                        </div>
+                        <!-- Location-->
+                        <div class="control-group">
+                            <label class="title" for="title">Location:</label>
+                            <div class="controls">
+                                <input id="location" name="location" type="text" placeholder="" class="input-xlarge">
+                            </div>
+                        </div>
+                        <!-- LOGIN SUBMIT BUTTON -->
+                        <div class="control-group">
+                            <label class="control-label" for="login_button"></label>
+                            <div class="controls">
+                                <button id="singlebutton" name="login_button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
 </body>
