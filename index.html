@@ -16,29 +16,124 @@
     <div id="social_media" style="text-align: right;">
         <img src="images/facebook.png" alt="Facebook Icon" />
         <img src="images/twitter.png" alt="Twitter Icon" /><br /><br />
-        <i>Swap what you don't need to get what you do</i>
+        <i>Before you toss it...Swap it!</i>
     </div>
     <div style="clear: both;"></div>
 </header>
 <div id="wrapper">
+    <div id="splash_image">
+        <img src="images/splash_image.jpg" class="img-responsive" alt="Splash Image" />
+    </div>
     <div id="listing">
         <h1>Welcome to Stuff Swap</h1>
-        <form>
-            Name: &nbsp;<input type="text" name="name"><br />
-            Email: &nbsp;&nbsp;<input type="text" name="email"><br />
-            Phone: &nbsp;<input type="text" name="phone"><br />
-            <br />
-            Twitter: <input type="text" name="twitter"><br />
-            Facebook: <input type="text" name="facebook"><br />
-            What are you looking for? <br />
-            <input type="checkbox" name="item_pref" value="furniture"> Furniture <br />
-            <input type="checkbox" name="item_pref" value="food"> Food <br />
-            <input type="checkbox" name="item_pref" value="cooking_supplies"> Cooking Supplies<br />
-            <input type="checkbox" name="item_pref" value="instruments"> Musical Instruments<br />
-            <input type="checkbox" name="item_pref" value="pet_supplies"> Pet Supplies
-            <br />
+        <p style="color: #fff; font-weight: bold; text-shadow: 2px 2px #000;">
+            Fill out the information below to create a temporary user, and pick what you're looking for to start swapping.
+        </p>
+        <!--<form>
+            <table>
+                <tr>
+                    <td>
+                    Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name"><br />
+                    Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email"><br />
+                    Phone: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="phone"><br />
+                    Twitter: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="twitter"><br />
+                    Facebook: &nbsp;<input type="text" name="facebook">
+                    </td>
+                <td>
+                    What are you looking for? <br />
+                    <input type="checkbox" name="item_pref" value="furniture"> Furniture <br />
+                    <input type="checkbox" name="item_pref" value="food"> Food <br />
+                    <input type="checkbox" name="item_pref" value="cooking_supplies"> Cooking Supplies<br />
+                    <input type="checkbox" name="item_pref" value="instruments"> Musical Instruments<br />
+                    <input type="checkbox" name="item_pref" value="pet_supplies"> Pet Supplies</td>
+                </tr>
+            </table>
             <button type="submit" onclick="">Submit</button><!-- executes function-->
+        <!--</form>-->
+        <p></p>
+        <table><tr><td>
+        <form class="form-horizontal">
+            <fieldset style="border: none;">
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="name">Name</label>
+                <div class="controls">
+                    <input id="name" name="name" type="text" placeholder="" class="input-xlarge">
+                </div>
+            </div>
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="email">Email</label>
+                <div class="controls">
+                    <input id="email" name="email" type="text" placeholder="" class="input-xlarge">
+                </div>
+            </div>
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="phone">Phone #</label>
+                <div class="controls">
+                    <input id="phone" name="phone" type="text" placeholder="" class="input-xlarge">
+                </div>
+            </div>
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="password">Password</label>
+                <div class="controls">
+                    <input id="password" name="password" type="text" placeholder="" class="input-xlarge">
+                </div>
+            </div>
+            </td>
+            <td style="vertical-align: text-top; padding-top: 5px; padding-left: 30px;">
+            <strong>What are you looking for?</strong> <br /><br />
+                    <input type="checkbox" name="item_pref" value="furniture"> Furniture <br />
+                    <input type="checkbox" name="item_pref" value="food"> Food <br />
+                    <input type="checkbox" name="item_pref" value="cooking_supplies"> Cooking Supplies<br />
+                    <input type="checkbox" name="item_pref" value="instruments"> Musical Instruments<br />
+                    <input type="checkbox" name="item_pref" value="pet_supplies"> Pet Supplies <br />
+                    <input type="checkbox" name="item_pref" value="free"> Free Stuff <br />
+                    <input type="checkbox" name="item_pref" value="misc"> Miscellaneous
+            <!-- SUBMIT BUTTON -->
+            <br /><br />
+            <div class="control-group">
+                <label class="control-label" for="signup_button"></label>
+                <div class="controls">
+                    <button id="singlebutton" name="signup_button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </fieldset>
         </form>
+            </td>
+            <!-- ALREADY HAVE AN ACCOUNT -->
+            <td style="padding-left: 50px; vertical-align: top; padding-top: 5px;">
+                <strong>Already have an account?</strong>
+                <br /><br />
+                <form class="form-horizontal">
+                    <fieldset style="border: none;">
+                        <!-- Login Email-->
+                        <div class="control-group">
+                            <label class="login_email" for="login_email">Email:</label>
+                            <div class="controls">
+                                <input id="login_email" name="login_email" type="text" placeholder="" class="input-xlarge">
+                            </div>
+                        </div>
+                        <!-- Login Password-->
+                        <div class="control-group">
+                            <label class="login_password" for="login_email">Password:</label>
+                            <div class="controls">
+                                <input id="login_password" name="login_password" type="text" placeholder="" class="input-xlarge">
+                            </div>
+                        </div>
+                        <!-- LOGIN SUBMIT BUTTON -->
+                        <div class="control-group">
+                            <label class="control-label" for="login_button"></label>
+                            <div class="controls">
+                                <button id="singlebutton" name="login_button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </td>
+        </tr></table>
     </div>
 </div>
 </body>

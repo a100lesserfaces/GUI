@@ -1,6 +1,10 @@
 body {
     font-family: sans-serif;
 }
+a:link {
+    color: #fff;
+    text-decoration: none;
+}
 li {
     display: inline-block;
     margin-left: 0px;
@@ -56,12 +60,19 @@ header h1 {
 #listing p {
     margin: 0px;
     padding: 5px;
-    text-align: center;
 }
 #listing form {
     padding-left: 15px;
 }
+#listing h1 {
+    padding-top: 5px;
+    margin-bottom: 0px;
+    font-weight: normal;
+    margin-top: -70px;
+    color: #fff;
+    font-weight: bold;
+}
 h1 {
     padding: 0px;
-    margin-top: 5px;
+    margin-top: 0px;
 }
